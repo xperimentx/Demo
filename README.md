@@ -1,5 +1,3 @@
-![xperimentx atlas](doc/images/atlas.png) 
-
 
 xperiment**X Demo** is the Demonstration application of the xperimentX libraries.
 It shows in a more realistic way than the documentation the use of the php xperimentX libraries.
@@ -7,10 +5,10 @@ It shows in a more realistic way than the documentation the use of the php xperi
 
 
 
-## Libaries
+## Libraries
 
-* [xperiment**X Atlas**](https://github.com/xperimentx/atlas): a php toolkit 
-![xperimentx atlas](doc/images/atlas.png) 
+> [xperimentx atlas](doc/images/atlas.png) 
+> [xperiment**X Atlas**](https://github.com/xperimentx/atlas): a php toolkit 
 
 ---
 
@@ -22,7 +20,7 @@ First beta estimated in summer of 2018
 
 ----
 
-Draft
+## Draft
 ```
 www
 ├── index.php        ....... Main php

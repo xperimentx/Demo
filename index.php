@@ -1,5 +1,5 @@
 <?php
-include __DIR__.'/Atlas/php/Autoloader.php';
+include __DIR__.'/Xperimentx/Atlas/php/Autoloader.php';
 
 use Xperimentx\Atlas;
 
