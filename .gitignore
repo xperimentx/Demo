@@ -1,0 +1,11 @@
+# project files --------
+nbproject
+.idea
+.buildpath
+.project
+.settings
+
+# operating system -------
+Thumbs.db
+.DS_Store
+
