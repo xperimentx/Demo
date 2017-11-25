@@ -2,7 +2,7 @@
 xperiment**X Demo** is the Demonstration application of the xperimentX libraries.
 It shows in a more realistic way than the documentation the use of the php xperimentX libraries.
 
-
+[Credits.](doc/Credits.md)
 
 
 ## Libraries
@@ -15,7 +15,7 @@ It shows in a more realistic way than the documentation the use of the php xperi
 ## In the research and development state
 First beta estimated in summer of 2018
 
-![xperimentx atlas](Atlas/doc/images/pensando.png) 
+![xperimentx atlas](doc/images/pensando.png) 
 
 ----
 
