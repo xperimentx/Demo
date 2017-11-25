@@ -7,15 +7,13 @@ It shows in a more realistic way than the documentation the use of the php xperi
 
 ## Libraries
 
-> [xperimentx atlas](doc/images/atlas.png) 
-> [xperiment**X Atlas**](https://github.com/xperimentx/atlas): a php toolkit 
+> ![xperimentx atlas](doc/images/atlas.png) <br>
+> [xperiment**X Atlas**](https://github.com/xperimentx/atlas), a php toolkit 
 
 ---
 
 ## In the research and development state
 First beta estimated in summer of 2018
-
-![xperimentx atlas](Atlas/doc/images/pensando.png) 
 
 
 ----
