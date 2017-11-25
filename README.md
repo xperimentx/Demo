@@ -15,6 +15,7 @@ It shows in a more realistic way than the documentation the use of the php xperi
 ## In the research and development state
 First beta estimated in summer of 2018
 
+![xperimentx atlas](Atlas/doc/images/pensando.png) 
 
 ----
 
