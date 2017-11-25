@@ -1,19 +1,26 @@
 <?php
-include __DIR__.'/Xperimentx/Atlas/php/Autoloader.php';
+
 
 use Xperimentx\Atlas;
+
+// ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ Autoloader
+// Normally you only need:
+// include __DIR__.'/Xperimentx/Atlas/php/Autoloader.php';
+
+include file_exists( __DIR__.'/Xperimentx/Atlas/php/Autoloader.php')
+        ? __DIR__.'/Xperimentx/Atlas/php/Autoloader.php'                      // Normal include
+        : dirname(__DIR__).'/atlas-www/Xperimentx/Atlas/php/Autoloader.php';  // For my developmentdenviroment
 
 Atlas\Autoloader::Register(__DIR__);
 
 
-// Load config files
+// ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ Loading config
 Config\Autoloader ::Load();
 Config\Routes     ::Load();
 
-// Connect the main database
+
+// ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ Connect database
 $db = new Atlas\Db(new Config\Database());
-
-
 
 if (!$db->Connect())
 {
@@ -21,4 +28,6 @@ if (!$db->Connect())
 }
 
 
+
+// ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ Main
 echo "Hola mundo!";
