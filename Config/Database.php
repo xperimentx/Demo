@@ -1,7 +1,7 @@
 <?php
 namespace Config;
 
-class Database extends \Xperimentx\Atlas\Db\Cfg
+class Database extends \Xperimentx\Atlas\Db\Db_cfg
 {
     function __construct()
     {
