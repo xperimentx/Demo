@@ -27,7 +27,6 @@ www
 ├── Config           ....... Configuration files
 │   ├── Autoload.php
 │   ├── Database.php
-│   ├── Migration.php
 │   └── Routes.php
 │
 ├── App              ....... Application stuff
@@ -50,7 +49,7 @@ www
 │   └── Templates|
 |
 |
-├── migration.php    ....... Migration tool
+├── migrator.php    ....... Migration tool
 ├── Migrations
 │   ├── 001-Create_catalog_table.php
 │   ├── 002-Create_users_table.php

@@ -15,13 +15,15 @@
 namespace Config;
 
 /**
- * Routing configuration
+ * Migrator configuration
+ * @author Roberto González Vázquez
  */
-class Routes
+class  Migrator extends \Xperimentx\Atlas\Db\Migrations\Migrator_cfg
 {
-    public  static function Load()
+    function __construct()
     {
-        //TODO
+        $this->root       = dirname(__DIR__).'/Migrations';
+        $this->namespace  = 'Migrations';
+        $this->use_colors = true;
     }
 }
-

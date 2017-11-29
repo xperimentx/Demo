@@ -1,36 +1,29 @@
 <?php
+/**
+ * xperimentX Atlas Demo
+ *
+ * @link      https://github.com/xperimentx/Demo
+ * @link      https://xperimentX.com
+ *
+ * @author    Roberto González Vázquez, https://github.com/xperimentx
+ * @copyright 2017 Roberto González Vázquez
+ * 
+ * @license   MIT
+ */
 
 
-use Xperimentx\Atlas;
-
-// Autoloader
+// Includes the base: autoloader, database
 // ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
-// Normally you only need:
-// include __DIR__.'/Xperimentx/Atlas/php/Autoloader.php';
-
-include file_exists( __DIR__.'/Xperimentx/Atlas/php/Autoloader.php')
-        ? __DIR__.'/Xperimentx/Atlas/php/Autoloader.php'                      // Normal include
-        : dirname(__DIR__).'/atlas-www/Xperimentx/Atlas/php/Autoloader.php';  // For my developmentdenviroment
-
-Atlas\Autoloader::Register(__DIR__);
+define ('RUNNING', 1); 
+include __DIR__.'/base.php';  // Include base of our programs: 
 
 
-//Loading config
+// Load aditional config
 // ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
-Config\Autoloader ::Load();
-Config\Routes     ::Load();
+Config\Routes::Load();
 
 
-// Connect database
-// ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
-$db = new Atlas\Db(new Config\Database());
 
-if (!$db->Connect())
-{
-    die ("Database connection error \n");
-}
-
-
-// Main
+// Main program
 // ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
 echo "Hola mundo!";

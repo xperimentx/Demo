@@ -1,4 +1,5 @@
 <?php
+
 /**
  * xperimentX Atlas Demo
  *
@@ -11,17 +12,4 @@
  * @license   MIT
  */
 
-
-namespace Config;
-
-/**
- * Routing configuration
- */
-class Routes
-{
-    public  static function Load()
-    {
-        //TODO
-    }
-}
-
+defined('RUNNING') || header(($_SERVER["SERVER_PROTOCOL"]??'HTTP/1.1').' 403 Forbidden') & exit();
