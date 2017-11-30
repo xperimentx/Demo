@@ -7,7 +7,7 @@
  *
  * @author    Roberto González Vázquez, https://github.com/xperimentx
  * @copyright 2017 Roberto González Vázquez
- * 
+ *
  * @license   MIT
  */
 

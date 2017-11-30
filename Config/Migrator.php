@@ -7,7 +7,7 @@
  *
  * @author    Roberto González Vázquez, https://github.com/xperimentx
  * @copyright 2017 Roberto González Vázquez
- * 
+ *
  * @license   MIT
  */
 
@@ -22,7 +22,7 @@ class  Migrator extends \Xperimentx\Atlas\Db\Migrations\Migrator_cfg
 {
     function __construct()
     {
-        $this->root       = dirname(__DIR__).'/Migrations';
+        $this->root       = dirname(__DIR__).'/Devel/Migrations';
         $this->namespace  = 'Migrations';
         $this->use_colors = true;
     }

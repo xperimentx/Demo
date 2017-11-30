@@ -11,19 +11,18 @@
  * @license   MIT
  */
 
-use Xperimentx\Atlas\Db\Migrations\Migrator_cli;
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Only cli
-$argv[0] ?? header(($_SERVER["SERVER_PROTOCOL"]??'HTTP/1.1').' 403 Forbidden') & exit();
-
-
 // Includes the base: autoloader, database
 define ('RUNNING',1 );
 include dirname(__DIR__).'/base.php';
 
+//$db = new Xperimentx\Atlas\Db();
+$db->throw_exceptions=false;
+try
+{
+    $db->Connect();
+} catch (\Xperimentx\Atlas\Db\Db_exception $ex)
+{
+    print_r($ex->Get_error_item());
+}
 
-// Maim
-(new Migrator_cli( new Config\Migrator() ))->Run();
+

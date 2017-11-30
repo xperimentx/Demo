@@ -7,7 +7,7 @@
  *
  * @author    Roberto González Vázquez, https://github.com/xperimentx
  * @copyright 2017 Roberto González Vázquez
- * 
+ *
  * @license   MIT
  */
 
@@ -17,9 +17,9 @@
  * Include autoloader an database conecction.
  * Stops if no data base conection available.
  */
- 
+
 defined('RUNNING') || header(($_SERVER["SERVER_PROTOCOL"]??'HTTP/1.1').' 403 Forbidden') & exit();
- 
+
 use Xperimentx\Atlas\Autoloader;
 use Xperimentx\Atlas\Db;
 
@@ -28,12 +28,12 @@ use Xperimentx\Atlas\Db;
 // ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
 // Normally you only need:
 // include __DIR__.'/Xperimentx/Atlas/php/Autoloader.php';
-// 
+//
 // this ternary operator is necessary only for development purposes
 
 include file_exists( __DIR__.'/Xperimentx/Atlas/php/Autoloader.php')
-        ? __DIR__.'/Xperimentx/Atlas/php/Autoloader.php'                      
-        : dirname(__DIR__).'/atlas-www/Xperimentx/Atlas/php/Autoloader.php'; 
+        ? __DIR__.'/Xperimentx/Atlas/php/Autoloader.php'
+        : dirname(__DIR__).'/atlas-www/Xperimentx/Atlas/php/Autoloader.php';
 
 
 Autoloader::Register(__DIR__);
