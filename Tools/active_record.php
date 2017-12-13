@@ -11,19 +11,16 @@
  * @license   MIT
  */
 
-
-namespace Config;
-
 /**
- * Migrator configuration
+ * Active record tool
  * @author Roberto González Vázquez
  */
-class  Migrator extends \Xperimentx\Atlas\Db\Migrations\Migrator_cfg
-{
-    function __construct()
-    {
-        $this->root       = dirname(__DIR__).'/Tools/Migrations';
-        $this->namespace  = 'Migrations';
-        $this->use_colors = true;
-    }
-}
+
+define ('RUNNING',1 );
+include dirname(__DIR__).'/base_cli.php';
+
+
+use Xperimentx\Atlas\Tools;
+
+(new  Tools\Active_record())->Run();
+

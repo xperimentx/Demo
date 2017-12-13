@@ -11,18 +11,15 @@
  * @license   MIT
  */
 
-// Includes the base: autoloader, database
+/**
+ * Migrator tool
+ * @author Roberto González Vázquez
+ */
+
 define ('RUNNING',1 );
-include dirname(__DIR__).'/base.php';
-
-//$db = new Xperimentx\Atlas\Db();
-$db->throw_exceptions=false;
-try
-{
-    $db->Connect();
-} catch (\Xperimentx\Atlas\Db\Db_exception $ex)
-{
-    print_r($ex->Get_error_item());
-}
+include dirname(__DIR__).'/base_cli.php';
 
 
+use Xperimentx\Atlas\Tools;
+
+(new Tools\Migrator( new Config\Migrator() ))->Run();
