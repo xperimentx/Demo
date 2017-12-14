@@ -22,40 +22,15 @@ defined('RUNNING') || header(($_SERVER["SERVER_PROTOCOL"]??'HTTP/1.1').' 403 For
 
 use Xperimentx\Atlas;
 
-
 $dir = __DIR__;
-
-
-/* Autoloader
- * ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
- * Normally you only need:
- * include __DIR__.'/Xperimentx/Atlas/php/Autoloader.php';
- *
- * This proyect is used for de Research & development Atlas toolkit, this helps my IDE
- */
-
-$atlas_RnD_autoloader = dirname($dir).'/atlas-www/Xperimentx/Atlas/php/Autoloader.php';
-
-
-include file_exists($atlas_RnD_autoloader)
-        ? $atlas_RnD_autoloader                        // Atlas R&D enviroment
-        : $dir.'/Xperimentx/Atlas/php/Autoloader.php'; // typical
-
-Atlas\Autoloader::Register($dir);
-
-// ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
-
-
 
 /* Load configuration
  * ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
  */
+include_once $dir.'/Config/Autoloader.php';
 include_once $dir.'/Config/Environment.php';
 
 $stage = Atlas\Environment::Get_stage();
-
-include_once $dir.'/Config/Autoloader.php';
-
 
 // Connect database or die
 $db = new Atlas\Db('Config\Database_'.$stage);

@@ -1,14 +1,15 @@
 
-xperiment**X Demo** is the Demonstration application of the xperimentX libraries.
-It shows in a more realistic way than the documentation the use of the php xperimentX libraries.
-
-[Credits.](doc/Credits.md)
+**xperimentX Demo** is the Demonstration application of  
+[xperimentX Atlas Toolkit](https://github.com/xperimentx/atlas).
 
 
-## Libraries
+* Atlas and Demo are partners and they are being developed together, 
+ since one project helps the other.
 
-> ![xperimentx atlas](doc/images/atlas.png) <br>
-> [xperiment**X Atlas**](https://github.com/xperimentx/atlas), a php toolkit 
+Demo shows is a real world example of use Atlas.
+
+[![xperimentx atlas](doc/images/atlas.png)](https://github.com/xperimentx/atlas) 
+
 
 ---
 
@@ -20,54 +21,55 @@ First beta estimated in summer of 2018
 ----
 
 ## Draft
-```
+
+<pre>
 www
-├── index.php        ....... Main php
+├── <b>base.php</b>         <i>. . . . Common base for app and tools</i>
+├── <b>index.php</b>        <i>. . . . Aplication main php</i>
+│    
+├── <b>Config</b>           <i>. . . . Configuration files</i>
+│   ├── <b>.development</b> <i>. . . . Only exist in development stage</i>    
+│   ├── <b>Autoload.php</b>               
+│   ├── <b>Database_development.php</b>
+│   ├── <b>Database_production.php</b>
+│   ├── <b>Environment.php</b>
+│   ├── <b>Migrator.php</b>
+│   └── <b>Routes.php</b>
 │
-├── Config           ....... Configuration files
-│   ├── Autoload.php
-│   ├── Database.php
-│   └── Routes.php
-│
-├── App              ....... Application stuff
-│   ├── App.php      ....... Main class
-│   ├── Common_class.php ... Auxiliary classes
-│   ├── Tools.php
-│   ├── ...
-│   ├── Models       ....... The hard work 
-│   ├── Controllers  
-│   ├── Views
-│   └── Templates
+├── <b>App</b>              <i>. . . . Application stuff</i>
+│   ├── <b>Controllers</b>  
+│   ├── <b>Views</b>
+│   └── <b>Templates</b> 
 |
-├── Web              ....... Public web
-│   ├── Common_class.php ... Auxiliary classes
-│   ├── Tools.php
+├── <b>Tools</b>
+│   ├── <b>active_record.php</b> <i>. Helps to generate model classes
+│   ├── <b>migrator.php</b>  <i>. . . Migration tool 
+│   |
+│   └── <b>Migrations</b>  <i>. . . . Migration steps</i>
+│      ├── <b>001-Frirst_migration.php</b>
+│      ├── <b>002-Create_users_table.php</b>
+│      ├── ....
+│      └── <b>999-Last_migration.php</b>
+│     
+├── <b>Web</b>              <i>. . . . Public web</i>
+│   ├── <b>Common_class.php</b> <i>. . Auxiliary classes</i>
 │   ├── ...
-│   ├── Models       ....... The hard work 
-│   ├── Controllers  
-│   ├── Views
-│   └── Templates|
-|
-|
-├── migrator.php    ....... Migration tool
-├── Migrations
-│   ├── 001-Create_catalog_table.php
-│   ├── 002-Create_users_table.php
-│   ├── ...
-│   ├── View
-│   └── 013-Alter_users_add_gps_position.php
+│   ├── <b>Models</b>       <i>. . . . The hard work</i> 
+│   ├── <b>Controllers</b>  
+│   ├── <b>Views</b>
+│   └── <b>Templates</b>
 │
 │
-├── media
-│   └── images
+├── <b>media
+│   └── <b>images</b>
 │
-├── Xperimentx
-│   ├── Atlas
-│   ├── Control
-│   └── Crud
+├── <b>Xperimentx</b>
+│   ├── <b>Atlas</b>
+│   ├── <b>Control</b>
+│   └── <b>Crud</b>
 │
-└── vendor           ....... Other libraries
-    └── Acme
-        └── src
-```
+└── <b>vendor </b>          . . . . Other libraries
+    └── <b>Acme</b>
+        └── <b>src</b>
+</pre>
  
