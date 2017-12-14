@@ -42,8 +42,8 @@ www
 │   └── <b>Templates</b> 
 |
 ├── <b>Tools</b>
-│   ├── <b>active_record.php</b> <i>. Helps to generate model classes
-│   ├── <b>migrator.php</b>  <i>. . . Migration tool 
+│   ├── <b>active_record.php</b> <i>. Helps to generate model classes</i>
+│   ├── <b>migrator.php</b>  <i>. . . Migration tool</i>
 │   |
 │   └── <b>Migrations</b>  <i>. . . . Migration steps</i>
 │      ├── <b>001-Frirst_migration.php</b>
@@ -68,7 +68,7 @@ www
 │   ├── <b>Control</b>
 │   └── <b>Crud</b>
 │
-└── <b>vendor </b>          . . . . Other libraries
+└── <b>vendor </b>          <span class="pl-c1"><i>. . . . Other libraries</i></span>
     └── <b>Acme</b>
         └── <b>src</b>
 </pre>
