@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+   #Options +FollowSymLinks -Indexes
+   RewriteEngine on
+   #AllowOverride All
+#
+   #RewriteBase /
+#
+#
+    # If the file / directory does not exist, we redirected to our main file.
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^(.*)$ /index.php/$1 [L]
+</IfModule>
+#
+#
+# ErrorDocument 404 index.php

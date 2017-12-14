@@ -13,16 +13,18 @@
 
 
 namespace Config;
+
+use Xperimentx\Atlas\Db\Db_cfg;
+
 /**
- * Database configuration.
+ * Database configuration for production stage.
  */
-class Database extends \Xperimentx\Atlas\Db\Db_cfg
+class Database_production extends Db_cfg
 {
     function __construct()
     {
-        $this->user_name = 'atlas_db_user';
-        $this->password  = 'atlas_db_passwd';
-        $this->db_name   = 'atlas_demo_db';
+        $this->db_name   = 'atlas_demo_db'  ;
+        $this->user_name = 'production_user'  ;
+        $this->password  = 'very_secret_password';
     }
 }
-
