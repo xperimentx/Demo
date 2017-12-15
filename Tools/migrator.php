@@ -17,7 +17,7 @@
  */
 
 // Only cli
-$argv[0] ?? header(($_SERVER["SERVER_PROTOCOL"]??'HTTP/1.1').' 403 Forbidden') & exit();
+defined('STDIN') ?? header(($_SERVER["SERVER_PROTOCOL"]??'HTTP/1.1').' 403 Forbidden') & exit();
 
 define ('RUNNING',1 );
 include dirname(__DIR__).'/base.php';
